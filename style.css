@@ -1,0 +1,409 @@
+/* ========== General Setup & Variables ========== */
+:root {
+    --crimson: #DC143C;
+    --white: #FFFFFF;
+    --black: #1a1a1a;
+    --light-gray: #f4f4f4;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ========== Navigation Bar --- (CHANGED) ========== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--black); /* Changed background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--crimson);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--white); /* Changed text color */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--crimson);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--white); /* Changed bar color */
+    transition: all 0.3s ease-in-out;
+}
+
+/* ========== Hero Section --- (CHANGED) ========== */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--white); /* Changed background */
+    color: var(--black); /* Changed text color */
+    padding: 0 2rem;
+    position: relative; /* Added for z-index context */
+    overflow: hidden; /* Added to contain animations */
+}
+
+.hero-content {
+    position: relative; /* Added */
+    z-index: 1; /* Puts content above the animation */
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* ========== Background Animation --- (ADDED & FIXED) ========== */
+#background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Sits behind content but on top of parent background */
+}
+
+.circle {
+    position: absolute;
+    list-style: none;
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(220, 20, 60, 0.15); /* Semi-transparent crimson */
+    bottom: -150px; /* Start from the bottom */
+    animation: move 25s infinite linear;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh); /* Move up past the top of the viewport */
+        opacity: 0;
+    }
+}
+
+/* Dynamic styles for circles will be added by JS, but here are examples */
+.circle:nth-child(1) { width: 80px; height: 80px; left: 25%; animation-duration: 45s; animation-delay: 0s; }
+.circle:nth-child(2) { width: 20px; height: 20px; left: 10%; animation-duration: 25s; animation-delay: 2s; }
+.circle:nth-child(3) { width: 50px; height: 50px; left: 70%; animation-duration: 55s; animation-delay: 4s; }
+.circle:nth-child(4) { width: 60px; height: 60px; left: 40%; animation-duration: 30s; animation-delay: 0s; }
+.circle:nth-child(5) { width: 20px; height: 20px; left: 85%; animation-duration: 35s; animation-delay: 3s; }
+.circle:nth-child(6) { width: 110px; height: 110px; left: 15%; animation-duration: 40s; animation-delay: 7s; }
+
+
+/* ========== Buttons ========== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--crimson);
+    color: var(--white);
+    border: 2px solid var(--crimson);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(220, 20, 60, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--crimson);
+    border: 2px solid var(--crimson);
+}
+
+.btn-secondary:hover {
+    background-color: var(--crimson);
+    color: var(--white);
+}
+
+/* ========== Content Sections ========== */
+.content-section {
+    padding: 6rem 0;
+}
+
+#about {
+    background-color: var(--light-gray);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--black);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--crimson);
+    margin: 0.5rem auto 0;
+}
+
+/* ========== About Section ========== */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--crimson);
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: var(--white);
+    color: var(--black);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+}
+
+/* ========== Projects Section ========== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+    color: var(--crimson);
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech span {
+    background: var(--crimson);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* ========== Contact Section ========== */
+#contact {
+    background-color: var(--light-gray);
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-text {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--crimson);
+}
+
+/* ========== Footer ========== */
+footer {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* ========== Animations ========== */
+.content-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========== Responsive Design (Mobile) ========== */
+@media (max-width: 768px) {
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .hamburger { display: block; }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px; /* Height of the navbar */
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* --- (CHANGED) --- Links in open mobile menu should be black */
+    .nav-menu.active .nav-link {
+        color: var(--black);
+    }
+
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-container {
+        justify-content: center;
+    }
+}
