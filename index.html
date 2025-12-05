@@ -1,173 +1,452 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petar Srbinoski | Software Engineering Student</title>
-    <meta name="description" content="Portfolio of Petar Srbinoski, a software engineering student at FINKI UKIM, Skopje.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petar Srbinoski | Software Engineering & AI</title>
+    <meta name="description" content="Portfolio of Petar Srbinoski, a Software Engineering and Information Systems student at FINKI UKIM, Skopje, focused on AI, app development, web development, and cybersecurity.">
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+    />
+
+    <!-- Icons -->
     <script src="https://kit.fontawesome.com/be45bb7e85.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <header class="main-header">
     <nav class="navbar">
+        <!-- PS. logo from your original site -->
         <a href="#home" class="nav-logo">PS.</a>
+
         <ul class="nav-menu">
             <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
             <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#beyond" class="nav-link">Beyond Code</a></li>
             <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+
+        <div class="nav-right">
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fa-regular fa-moon icon-moon"></i>
+            </button>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </nav>
 </header>
 
 <main>
+    <!-- Hero -->
     <section id="home" class="hero">
         <div id="background-animation"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Petar Srbinoski</h1>
-            <p class="hero-subtitle">Software Engineering Student at FINKI, UKIM</p>
-            <a href="#projects" class="btn btn-primary">View My Work</a>
+        <div class="hero-inner container">
+            <div class="hero-content">
+                <div class="hero-pill">Software Engineering Student</div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="hero-highlight">Petar</span>
+                </h1>
+                <p class="hero-subtitle">
+                    B.Sc. Software Engineering and Information Systems student at FINKI (UKIM), with a focus on AI, app & web development, and cybersecurity — turning algorithms and data into real, usable products.
+                </p>
+                <div class="hero-actions">
+                    <!-- 3D main CTA -->
+                    <a href="#projects" class="btn-3d">
+                        <div class="btn-3d-top">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>View AI / ML Work</span>
+                        </div>
+                        <div class="btn-3d-bottom"></div>
+                    </a>
+
+                    <!-- secondary ghost button (normal, not 3D) -->
+                    <a href="#contact" class="btn btn-ghost">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        Contact Me
+                    </a>
+                </div>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Degree</span>
+                        <span class="meta-value">B.Sc. SEIS · Grad June 2027</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus Areas</span>
+                        <span class="meta-value">AI &amp; LLMs · Web &amp; Apps · Security</span>
+                    </div>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/PetarSrbinoski" target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="mailto:petar.srbinoski@gmail.com" target="_blank" aria-label="Email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/petar-srbinoski-8a1b63309/?originalSubdomain=mk"
+                       target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-avatar">
+                    <div class="avatar-ring"></div>
+                    <img src="profile.jpg" alt="A photo of Petar Srbinoski">
+                </div>
+                <div class="hero-card-body">
+                    <h2>AI-focused Software Engineering Student</h2>
+                    <p>
+                        I enjoy working where algorithms, systems and people meet — from multimodal AI models to full-stack apps and interactive visualizations.
+                    </p>
+                </div>
+            </div>
         </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+            <span class="scroll-wheel"></span>
+        </a>
     </section>
 
+    <!-- About -->
     <section id="about" class="about-section content-section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
+            <p class="section-intro">
+                Strong fundamentals, curiosity and lots of building — both in class and in my free time.
+            </p>
             <div class="about-content">
                 <div class="about-image">
+                    <div class="about-image-glow"></div>
                     <img src="profile.jpg" alt="A photo of Petar Srbinoski">
                 </div>
                 <div class="about-text">
                     <p>
-                        I am a dedicated and passionate Software Engineering student at the Faculty of Computer Science and Engineering (FINKI) in Skopje. With a strong foundation in algorithms, data structures, and object-oriented programming, I am driven to build efficient, scalable, and user-friendly software solutions.
+                        I’m a Software Engineering and Information Systems student at FINKI (UKIM). My studies combine strong coding practice in C++, Java and Python with solid foundations in algorithms, data structures, operating systems and computer networks.
                     </p>
                     <p>
-                        I thrive on challenges and am constantly seeking to learn new technologies. My goal is to apply my academic knowledge to solve real-world problems and contribute to innovative projects. I am currently seeking an internship where I can grow as a developer and be a valuable member of a team.
+                        On top of this, I’ve explored AI, web development, visual programming and software requirements analysis, which helps me think not only about how to build systems, but also how people will use them.
                     </p>
-                    <h3>Key Skills:</h3>
-                    <div class="skills-container">
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">HTML & CSS</span>
-                        <span class="skill-tag">Unity</span>
-                        <span class="skill-tag">Blender</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
+                    <p>
+                        Many of my projects started as coursework, but I always push them further — like fine-tuning CLIP for dementia detection, building a full-stack Reddit-like desktop app, or creating tools that visualize algorithms or automate content creation.
+                    </p>
+
+                    <div class="skills-wrapper">
+                        <h3>Tech Stack &amp; Tools</h3>
+                        <div class="skills-container">
+                            <span class="skill-tag skill-icon">
+                                <i class="fa-brands fa-python"></i> Python
+                            </span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML &amp; CSS</span>
+                            <span class="skill-tag">.NET MAUI</span>
+                            <span class="skill-tag">scikit-learn</span>
+                            <span class="skill-tag">OpenAI CLIP</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Unity</span>
+                            <span class="skill-tag">Git &amp; GitHub</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Supabase</span>
+                            <span class="skill-tag">Monkey C</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">FFmpeg</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-wrapper" style="margin-top: 1.4rem;">
+                        <h3>Languages</h3>
+                        <div class="skills-container">
+                            <span class="skill-tag">Macedonian · Native</span>
+                            <span class="skill-tag">English · C1</span>
+                            <span class="skill-tag">German · B1</span>
+                            <span class="skill-tag">Serbian · B2</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects" class="projects-section content-section">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="project-grid">
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="section-intro">
+                A focused set of AI/ML and software projects that show how I approach problem-solving and turn ideas into working products.
+            </p>
 
-                <div class="project-card">
-                    <h3>Unity2D Game</h3>
-                    <p>A short combat focused 2D arena game made in Unity. Built for a school project.</p>
-                    <div class="project-tech">
-                        <span>Unity</span><span>C#</span><span>Photoshop</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/PetarSrbinoski/Finki-Igra-Full-Project" target="_blank" class="btn btn-secondary">Source Code</a>
-                    </div>
-                </div>
+            <!-- Filters -->
+            <div class="project-filters">
+                <button class="filter-chip active" data-filter="all">All</button>
+                <button class="filter-chip" data-filter="ai">AI / ML</button>
+                <button class="filter-chip" data-filter="game">Games</button>
+                <button class="filter-chip" data-filter="tool">Tools &amp; Apps</button>
+            </div>
 
-                <div class="project-card">
-                    <h3>Algorithm Visualizer</h3>
-                    <p>An interactive web tool that visualizes common sorting and pathfinding algorithms, helping students understand complex computer science concepts.</p>
-                    <div class="project-tech">
-                        <span>JavaScript</span><span>HTML Canvas</span><span>CSS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://petarsrbinoski.github.io/AlgorithmVisualizer" target="_blank" class="btn btn-secondary">Live Demo</a>
-                        <a href="https://github.com/PetarSrbinoski/AlgorithmVisualizer" target="_blank" class="btn btn-secondary">Source Code</a>
-                    </div>
-                </div>
+            <!-- AI / ML spotlight -->
+            <div class="projects-group">
+                <h3 class="projects-group-title">
+                    <span class="dot"></span>
+                    AI &amp; Machine Learning
+                </h3>
+                <div class="project-grid">
 
-                <div class="project-card">
-                    <h3>Habit tracker for Garmin Smarwatch</h3>
-                    <p>An app that allows you to track your habits on your garmin forerunner 265, and view your progres over the last 7 days.</p>
-                    <div class="project-tech">
-                        <span>Monkey C</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/PetarSrbinoski/GarminHabitTracker" target="_blank" class="btn btn-secondary">Source Code</a>
-                    </div>
-                </div>
+                    <article class="project-card project-card-featured" data-category="ai">
+                        <div class="project-header">
+                            <span class="project-label project-label-ai">Multimodal AI</span>
+                            <h3>DementiaCLIP</h3>
+                        </div>
+                        <p class="project-description">
+                            A multimodal CLIP-based project that uses spectrograms from patient speech, text and audio features to support early dementia detection.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span><span>OpenAI CLIP</span><span>PyTorch</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Modalities</span>
+                                <span class="metric-value">Audio · Text · Spectrograms</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Focus</span>
+                                <span class="metric-value">Feature fusion &amp; evaluation</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/PetarSrbinoski/DementiaCLIP"
+                               target="_blank" class="btn btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </article>
 
-                <div class="project-card">
-                    <h3>Deskit a desktop app forum page</h3>
-                    <p>A forum page where you can find anything that interests you.</p>
-                    <div class="project-tech">
-                        <span>C#</span><span>Python</span><span>.net Maui (blazer hybrid)</span><span>Supabase</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/MarkoPopovikj/DeskIt" target="_blank" class="btn btn-secondary">Source Code</a>
-                    </div>
-                </div>
+                    <article class="project-card project-card-featured" data-category="ai">
+                        <div class="project-header">
+                            <span class="project-label project-label-ai">Generative AI</span>
+                            <h3>AI-Generated TikToks</h3>
+                        </div>
+                        <p class="project-description">
+                            A PowerShell pipeline that chains Ollama, PiperTTS and FFmpeg to automatically create short mystery/horror TikToks — from story generation to voiceover and subtitles.
+                        </p>
+                        <div class="project-tech">
+                            <span>Ollama</span><span>PowerShell</span><span>PiperTTS</span><span>FFmpeg</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/PetarSrbinoski/StoryGeneratingAITIktok.git"
+                               target="_blank" class="btn btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </article>
 
-                <div class="project-card">
-                    <h3>Dementia CLiP</h3>
-                    <p>DementiaCLIP uses multimodal CLIP models to detect early dementia by combining audio, text, and spectrogram features from patient speech.</p>
-                    <div class="project-tech">
-                        <span>Python</span><span>OpenAi CLiP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/PetarSrbinoski/DementiaCLIP" target="_blank" class="btn btn-secondary">Source Code</a>
-                    </div>
+                    <article class="project-card project-card-featured" data-category="ai">
+                        <div class="project-header">
+                            <span class="project-label project-label-ai">Visualization</span>
+                            <h3>Algorithm Visualizer</h3>
+                        </div>
+                        <p class="project-description">
+                            An interactive web tool that visualizes sorting and pathfinding algorithms step-by-step, helping students understand behavior and time complexity.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span><span>HTML Canvas</span><span>CSS</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://petarsrbinoski.github.io/AlgorithmVisualizer"
+                               target="_blank" class="btn btn-secondary">
+                                <i class="fa-solid fa-play"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/PetarSrbinoski/AlgorithmVisualizer"
+                               target="_blank" class="btn btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </article>
+
                 </div>
-                <div class="project-card">
-                    <h3>AI Generated Tiktoks</h3>
-                    <p>A powershell script that uses ollama LLM, piperTTS and FFmpeg for subtitles, to generate a tiktok with an interesting short mystery/horror story.</p>
-                    <div class="project-tech">
-                        <span>Ollama</span><span>PowerShell</span><span>PiperTTS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/PetarSrbinoski/StoryGeneratingAITIktok.git" target="_blank" class="btn btn-secondary">Source Code</a>
-                    </div>
+            </div>
+
+            <!-- Supporting projects -->
+            <div class="projects-group">
+                <h3 class="projects-group-title">
+                    <span class="dot"></span>
+                    Apps &amp; Games
+                </h3>
+                <div class="project-grid">
+
+                    <article class="project-card" data-category="tool">
+                        <div class="project-header">
+                            <span class="project-label">Full-stack App</span>
+                            <h3>DeskIt · Desktop Forum</h3>
+                        </div>
+                        <p class="project-description">
+                            Co-coordinated and developed a Reddit-like desktop forum app, built as a .NET MAUI Blazor hybrid application with Supabase backend.
+                        </p>
+                        <div class="project-tech">
+                            <span>C#</span><span>Python</span><span>.NET MAUI</span><span>Supabase</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/MarkoPopovikj/DeskIt"
+                               target="_blank" class="btn btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="tool">
+                        <div class="project-header">
+                            <span class="project-label">Wearable App</span>
+                            <h3>Garmin Habit Tracker</h3>
+                        </div>
+                        <p class="project-description">
+                            A habit tracking app for the Garmin Forerunner 265, letting users mark daily habits and view a compact 7-day progress overview directly on their watch.
+                        </p>
+                        <div class="project-tech">
+                            <span>Monkey C</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/PetarSrbinoski/GarminHabitTracker"
+                               target="_blank" class="btn btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="game">
+                        <div class="project-header">
+                            <span class="project-label">Game Dev</span>
+                            <h3>Unity 2D Combat Arena</h3>
+                        </div>
+                        <p class="project-description">
+                            A short 2D combat arena game built in Unity as a FINKI project, showcasing OOP design, enemy waves and responsive player controls.
+                        </p>
+                        <div class="project-tech">
+                            <span>Unity</span><span>C#</span><span>Photoshop</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/PetarSrbinoski/Finki-Igra-Full-Project"
+                               target="_blank" class="btn btn-secondary">
+                                <i class="fa-brands fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </article>
+
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beyond Code – playful, different look -->
+    <section id="beyond" class="beyond-section content-section">
+        <div class="container">
+            <h2 class="section-title">Beyond Code</h2>
+            <p class="section-intro">
+                Stuff that doesn’t live in a repo, but matters a lot for how I think and work.
+            </p>
+
+            <div class="beyond-grid">
+
+                <article class="beyond-card">
+                    <div class="beyond-icon" aria-hidden="true">🤺</div>
+                    <h3 class="beyond-title">National Fencer · Epee</h3>
+                    <p class="beyond-text">
+                        #1 ranked epee fencer in North Macedonia, representing the country at World and European Championships.
+                    </p>
+                    <div class="beyond-tags">
+                        <span>Discipline</span>
+                        <span>Strategy</span>
+                        <span>Staying calm</span>
+                    </div>
+                </article>
+
+                <article class="beyond-card">
+                    <div class="beyond-icon" aria-hidden="true">🎽</div>
+                    <h3 class="beyond-title">Marathon Volunteer</h3>
+                    <p class="beyond-text">
+                        Six years volunteering at the Wizz Air Skopje Marathon, helping organize and support thousands of runners.
+                    </p>
+                    <div class="beyond-tags">
+                        <span>Teamwork</span>
+                        <span>Logistics</span>
+                        <span>People skills</span>
+                    </div>
+                </article>
+
+                <article class="beyond-card">
+                    <div class="beyond-icon" aria-hidden="true">💡</div>
+                    <h3 class="beyond-title">Hackathon Builder</h3>
+                    <p class="beyond-text">
+                        Participated in startup-focused hackathons like Srekja.mk, prototyping community ideas under time pressure.
+                    </p>
+                    <div class="beyond-tags">
+                        <span>Rapid prototyping</span>
+                        <span>Product thinking</span>
+                        <span>Creativity</span>
+                    </div>
+                </article>
 
             </div>
         </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="contact-section content-section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p class="contact-text">
-                I'm currently looking for internship opportunities and am always open to connecting with fellow students, developers, and recruiters. Feel free to reach out!
+                I’m looking for internship opportunities in software engineering and AI/ML, and I’m always happy to connect with developers, students and recruiters.
             </p>
+
+            <!-- 3D contact button -->
             <a href="mailto:petar.srbinoski@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary">
-                Contact Me</a>
-            <div class="social-links">
-                <a href="https://github.com/PetarSrbinoski" target="_blank" aria-label="GitHub">GitHub</a>
-                <a href="https://www.linkedin.com/in/petar-srbinoski-8a1b63309/?originalSubdomain=mk" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn-3d contact-btn">
+                <div class="btn-3d-top">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <span>Contact Me</span>
+                </div>
+                <div class="btn-3d-bottom"></div>
+            </a>
+
+            <!-- Icon-only links at the bottom -->
+           <SECTION> <div class="contact-icons">
+                <a href="mailto:petar.srbinoski@gmail.com" target="_blank" aria-label="Email">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+                <a href="https://github.com/PetarSrbinoski" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/petar-srbinoski-8a1b63309/?originalSubdomain=mk"
+                   target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
             </div>
+           </SECTION>
         </div>
     </section>
 </main>
 
-<footer>
-    <p>Designed & Built by Petar Srbinoski &copy; 2025</p>
+<footer class="footer">
+    <p>Designed &amp; Built by <span>Petar Srbinoski</span> · &copy; 2025</p>
 </footer>
 
 <script src="script.js"></script>
